@@ -1,0 +1,9 @@
+% Orbital Mechanics for Engineering Students kitabından alınmıştır.
+% Appendix D.7
+% Algorithm 3.4 sayfa 604
+
+% Bu fonksiyon, initial state vektöründen (R0, V0) ve geçen süreden, state
+% vektörünü (R, V) hesaplar.
+
+% mu - kütleçekimsel parametre (km^3/s^2)
+% R0 - initial pozisyon vektörü

@@ -26,7 +26,7 @@ R_earth = 6378.137;     % Dünya yarıçapı (km)
 %% Yörünge Parametreleri (1000 km LEO, Güneş-senkron)
 h_altitude = 1000;                      % Yörünge yüksekliği (km)
 a = R_earth + h_altitude;               % Yarı-büyük eksen (km)
-e = 0;                                  % Eksantriklik (dairesel yörünge)
+e = 0.03;                                  % Eksantriklik (dairesel yörünge)
 incl = 98 * pi/180;                     % Eğilim (rad) - Güneş-senkron için tipik
 RA = 0 * pi/180;                        % RAAN (rad)
 w = 0 * pi/180;                         % Argument of perigee (rad)
