@@ -129,13 +129,22 @@ controller.allocation_mode = 1;  % 1=hybrid, 2=wheel_only, 3=mtq_only
 assignin('base', 'controller', controller);
 
 %% ==================== MEKF PARAMETERS ====================
-mekf.gyro_noise = sensors.imu.gyro_arw;
-mekf.gyro_bias_noise = sensors.imu.gyro_bias_instability;
-mekf.accel_noise = 0.02;  % Normalized measurement noise
-mekf.mag_noise = 0.03;    % Normalized measurement noise
-mekf.dt = sim_params.dt;
+mekf_params = struct();
+mekf_params.gyro_noise = 0.15 * (pi/180) / sqrt(3600);;
+mekf_params.gyro_bias_noise = 0.5 * (pi/180) / 3600;
+mekf_params.accel_noise = 0.03;
+mekf_params.mag_noise = 0.05;
+mekf_params.init_attitude_var = (10 * pi/180)^2;
+mekf_params.init_bias_var = (1 * pi/180 / 3600)^2;
+mekf_params.mekf_state = [];
 
-assignin('base', 'mekf', mekf);
+% mekf.gyro_noise = sensors.imu.gyro_arw;
+% mekf.gyro_bias_noise = sensors.imu.gyro_bias_instability;
+% mekf.accel_noise = 0.02;  % Normalized measurement noise
+% mekf.mag_noise = 0.03;    % Normalized measurement noise
+% mekf.dt = sim_params.dt;
+
+assignin('base', 'mekf_params', mekf_params);
 
 %% ==================== ENVIRONMENT PARAMETERS ====================
 env.B0 = 3.12e-5;              % Earth magnetic field constant (T)
