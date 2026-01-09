@@ -2,7 +2,7 @@
 % Astronomik almanac formülleri kullanılarak güneş konumu hesaplanır.
 %
 % Bu fonksiyon, GNSS'den gelen UTC zaman bilgisiyle güneşin ECI 
-% koordinatlarındaki konumunu hesaplar (KESİTİRİM DEĞİL, HESAPLAMA).
+% koordinatlarındaki konumunu hesaplar.
 %
 % Referanslar:
 %   - Vallado (2013), "Fundamentals of Astrodynamics and Applications"

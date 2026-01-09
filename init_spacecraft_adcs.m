@@ -130,7 +130,7 @@ assignin('base', 'controller', controller);
 
 %% ==================== MEKF PARAMETERS ====================
 mekf_params = struct();
-mekf_params.gyro_noise = 0.15 * (pi/180) / sqrt(3600);;
+mekf_params.gyro_noise = 0.15 * (pi/180) / sqrt(3600);
 mekf_params.gyro_bias_noise = 0.5 * (pi/180) / 3600;
 mekf_params.accel_noise = 0.03;
 mekf_params.mag_noise = 0.05;
