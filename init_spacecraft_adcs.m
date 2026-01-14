@@ -108,6 +108,9 @@ actuators.mtq.residual_dipole = [0.1; 0.1; 0.1]; % Am² (residual)
 actuators.mtq.num_mtq = 3;
 actuators.mtq.axes = eye(3);                   % MTQ axes in body frame
 
+actuators.dump_gain = 0.05;
+actuators.dump_threshold = 0.3;
+
 assignin('base', 'actuators', actuators);
 
 %% ==================== CONTROLLER PARAMETERS ====================
